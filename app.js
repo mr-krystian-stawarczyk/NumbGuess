@@ -26,6 +26,16 @@ guessBtn.addEventListener("click", function () {
 	if (isNaN(guess) || guess < min || guess > max) {
 		setMessage(`Please enter proper number between ${min} and ${max}`, "red");
 	}
+
+	//Check if WON
+	if (guess === winningNumb) {
+		guessInput.disabled = true;
+		// Change color border
+		guessInput.style.color = "green";
+		// Set message when WON
+		setMessage(`${winningNumb} is correct! You win CHAMP!`, "green");
+	} else {
+	}
 });
 
 // Set message
